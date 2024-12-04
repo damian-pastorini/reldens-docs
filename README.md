@@ -24,7 +24,7 @@ Follow the project progress in the GitHub board: https://github.com/users/damian
   - [Rooms](https://github.com/damian-pastorini/reldens-docs/blob/master/entities/rooms.md)
   - [Objects](https://github.com/damian-pastorini/reldens-docs/blob/master/entities/objects.md)
   - [Respawn Areas](https://github.com/damian-pastorini/reldens-docs/blob/master/entities/respawn-areas.md)
-- 
+- At this point we have a few options to create the contents: some can be "generated" and "imported" and some will have to be created on the admin panel, but always in the order described above.
 - Start the server and login into the admin panel (default URL http://localhost:8080/reldens-admin) to start creating the game contents.
 ```
 Default access
