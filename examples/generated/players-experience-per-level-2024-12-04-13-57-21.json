@@ -1,0 +1,601 @@
+{
+    "1": {
+        "req": 10,
+        "total": 10,
+        "growthFactor": 2
+    },
+    "2": {
+        "diff": 10,
+        "req": 20,
+        "total": 30,
+        "growthFactor": 2.005
+    },
+    "3": {
+        "diff": 20,
+        "req": 40,
+        "total": 70,
+        "growthFactor": 2.01
+    },
+    "4": {
+        "diff": 40,
+        "req": 80,
+        "total": 150,
+        "growthFactor": 2.015
+    },
+    "5": {
+        "diff": 40,
+        "req": 120,
+        "total": 270,
+        "growthFactor": 1.505
+    },
+    "6": {
+        "diff": 60,
+        "req": 180,
+        "total": 450,
+        "growthFactor": 1.51
+    },
+    "7": {
+        "diff": 91,
+        "req": 271,
+        "total": 721,
+        "growthFactor": 1.515
+    },
+    "8": {
+        "diff": 139,
+        "req": 410,
+        "total": 1131,
+        "growthFactor": 1.52
+    },
+    "9": {
+        "diff": 213,
+        "req": 623,
+        "total": 1754,
+        "growthFactor": 1.525
+    },
+    "10": {
+        "diff": 218,
+        "req": 841,
+        "total": 2595,
+        "growthFactor": 1.355
+    },
+    "11": {
+        "diff": 298,
+        "req": 1139,
+        "total": 3734,
+        "growthFactor": 1.36
+    },
+    "12": {
+        "diff": 410,
+        "req": 1549,
+        "total": 5283,
+        "growthFactor": 1.365
+    },
+    "13": {
+        "diff": 565,
+        "req": 2114,
+        "total": 7397,
+        "growthFactor": 1.37
+    },
+    "14": {
+        "diff": 782,
+        "req": 2896,
+        "total": 10293,
+        "growthFactor": 1.375
+    },
+    "15": {
+        "diff": 784,
+        "req": 3680,
+        "total": 13973,
+        "growthFactor": 1.276
+    },
+    "16": {
+        "diff": 1015,
+        "req": 4695,
+        "total": 18668,
+        "growthFactor": 1.281
+    },
+    "17": {
+        "diff": 1319,
+        "req": 6014,
+        "total": 24682,
+        "growthFactor": 1.286
+    },
+    "18": {
+        "diff": 1720,
+        "req": 7734,
+        "total": 32416,
+        "growthFactor": 1.291
+    },
+    "19": {
+        "diff": 2250,
+        "req": 9984,
+        "total": 42400,
+        "growthFactor": 1.296
+    },
+    "20": {
+        "diff": 998,
+        "req": 10982,
+        "total": 53382,
+        "growthFactor": 1.105
+    },
+    "21": {
+        "diff": 1153,
+        "req": 12135,
+        "total": 65517,
+        "growthFactor": 1.11
+    },
+    "22": {
+        "diff": 1334,
+        "req": 13469,
+        "total": 78986,
+        "growthFactor": 1.115
+    },
+    "23": {
+        "diff": 1548,
+        "req": 15017,
+        "total": 94003,
+        "growthFactor": 1.12
+    },
+    "24": {
+        "diff": 1802,
+        "req": 16819,
+        "total": 110822,
+        "growthFactor": 1.125
+    },
+    "25": {
+        "diff": 2102,
+        "req": 18921,
+        "total": 129743,
+        "growthFactor": 1.13
+    },
+    "26": {
+        "diff": 2459,
+        "req": 21380,
+        "total": 151123,
+        "growthFactor": 1.135
+    },
+    "27": {
+        "diff": 2886,
+        "req": 24266,
+        "total": 175389,
+        "growthFactor": 1.14
+    },
+    "28": {
+        "diff": 3397,
+        "req": 27663,
+        "total": 203052,
+        "growthFactor": 1.145
+    },
+    "29": {
+        "diff": 4011,
+        "req": 31674,
+        "total": 234726,
+        "growthFactor": 1.15
+    },
+    "30": {
+        "diff": 4751,
+        "req": 36425,
+        "total": 271151,
+        "growthFactor": 1.155
+    },
+    "31": {
+        "diff": 5645,
+        "req": 42070,
+        "total": 313221,
+        "growthFactor": 1.16
+    },
+    "32": {
+        "diff": 6731,
+        "req": 48801,
+        "total": 362022,
+        "growthFactor": 1.165
+    },
+    "33": {
+        "diff": 8052,
+        "req": 56853,
+        "total": 418875,
+        "growthFactor": 1.17
+    },
+    "34": {
+        "diff": 9665,
+        "req": 66518,
+        "total": 485393,
+        "growthFactor": 1.175
+    },
+    "35": {
+        "diff": 11640,
+        "req": 78158,
+        "total": 563551,
+        "growthFactor": 1.18
+    },
+    "36": {
+        "diff": 14068,
+        "req": 92226,
+        "total": 655777,
+        "growthFactor": 1.185
+    },
+    "37": {
+        "diff": 17061,
+        "req": 109287,
+        "total": 765064,
+        "growthFactor": 1.19
+    },
+    "38": {
+        "diff": 20764,
+        "req": 130051,
+        "total": 895115,
+        "growthFactor": 1.195
+    },
+    "39": {
+        "diff": 25359,
+        "req": 155410,
+        "total": 1050525,
+        "growthFactor": 1.2
+    },
+    "40": {
+        "diff": 0,
+        "req": 155410,
+        "total": 1205935,
+        "growthFactor": 1.005
+    },
+    "41": {
+        "diff": 777,
+        "req": 156187,
+        "total": 1362122,
+        "growthFactor": 1.01
+    },
+    "42": {
+        "diff": 1561,
+        "req": 157748,
+        "total": 1519870,
+        "growthFactor": 1.015
+    },
+    "43": {
+        "diff": 2366,
+        "req": 160114,
+        "total": 1679984,
+        "growthFactor": 1.02
+    },
+    "44": {
+        "diff": 3202,
+        "req": 163316,
+        "total": 1843300,
+        "growthFactor": 1.025
+    },
+    "45": {
+        "diff": 4082,
+        "req": 167398,
+        "total": 2010698,
+        "growthFactor": 1.03
+    },
+    "46": {
+        "diff": 5021,
+        "req": 172419,
+        "total": 2183117,
+        "growthFactor": 1.035
+    },
+    "47": {
+        "diff": 6034,
+        "req": 178453,
+        "total": 2361570,
+        "growthFactor": 1.04
+    },
+    "48": {
+        "diff": 7138,
+        "req": 185591,
+        "total": 2547161,
+        "growthFactor": 1.045
+    },
+    "49": {
+        "diff": 8351,
+        "req": 193942,
+        "total": 2741103,
+        "growthFactor": 1.05
+    },
+    "50": {
+        "diff": 9697,
+        "req": 203639,
+        "total": 2944742,
+        "growthFactor": 1.055
+    },
+    "51": {
+        "diff": 11200,
+        "req": 214839,
+        "total": 3159581,
+        "growthFactor": 1.06
+    },
+    "52": {
+        "diff": 12890,
+        "req": 227729,
+        "total": 3387310,
+        "growthFactor": 1.065
+    },
+    "53": {
+        "diff": 14802,
+        "req": 242531,
+        "total": 3629841,
+        "growthFactor": 1.07
+    },
+    "54": {
+        "diff": 16977,
+        "req": 259508,
+        "total": 3889349,
+        "growthFactor": 1.075
+    },
+    "55": {
+        "diff": 19463,
+        "req": 278971,
+        "total": 4168320,
+        "growthFactor": 1.08
+    },
+    "56": {
+        "diff": 22317,
+        "req": 301288,
+        "total": 4469608,
+        "growthFactor": 1.085
+    },
+    "57": {
+        "diff": 25609,
+        "req": 326897,
+        "total": 4796505,
+        "growthFactor": 1.09
+    },
+    "58": {
+        "diff": 29420,
+        "req": 356317,
+        "total": 5152822,
+        "growthFactor": 1.095
+    },
+    "59": {
+        "diff": 33850,
+        "req": 390167,
+        "total": 5542989,
+        "growthFactor": 1.1
+    },
+    "60": {
+        "diff": 39016,
+        "req": 429183,
+        "total": 5972172,
+        "growthFactor": 1.105
+    },
+    "61": {
+        "diff": 45064,
+        "req": 474247,
+        "total": 6446419,
+        "growthFactor": 1.11
+    },
+    "62": {
+        "diff": 52167,
+        "req": 526414,
+        "total": 6972833,
+        "growthFactor": 1.115
+    },
+    "63": {
+        "diff": 60537,
+        "req": 586951,
+        "total": 7559784,
+        "growthFactor": 1.12
+    },
+    "64": {
+        "diff": 70434,
+        "req": 657385,
+        "total": 8217169,
+        "growthFactor": 1.125
+    },
+    "65": {
+        "diff": 82173,
+        "req": 739558,
+        "total": 8956727,
+        "growthFactor": 1.13
+    },
+    "66": {
+        "diff": 96142,
+        "req": 835700,
+        "total": 9792427,
+        "growthFactor": 1.135
+    },
+    "67": {
+        "diff": 112819,
+        "req": 948519,
+        "total": 10740946,
+        "growthFactor": 1.14
+    },
+    "68": {
+        "diff": 132792,
+        "req": 1081311,
+        "total": 11822257,
+        "growthFactor": 1.145
+    },
+    "69": {
+        "diff": 156790,
+        "req": 1238101,
+        "total": 13060358,
+        "growthFactor": 1.15
+    },
+    "70": {
+        "diff": 185715,
+        "req": 1423816,
+        "total": 14484174,
+        "growthFactor": 1.155
+    },
+    "71": {
+        "diff": 220691,
+        "req": 1644507,
+        "total": 16128681,
+        "growthFactor": 1.16
+    },
+    "72": {
+        "diff": 263121,
+        "req": 1907628,
+        "total": 18036309,
+        "growthFactor": 1.165
+    },
+    "73": {
+        "diff": 314758,
+        "req": 2222386,
+        "total": 20258695,
+        "growthFactor": 1.17
+    },
+    "74": {
+        "diff": 377805,
+        "req": 2600191,
+        "total": 22858886,
+        "growthFactor": 1.175
+    },
+    "75": {
+        "diff": 455033,
+        "req": 3055224,
+        "total": 25914110,
+        "growthFactor": 1.18
+    },
+    "76": {
+        "diff": 549940,
+        "req": 3605164,
+        "total": 29519274,
+        "growthFactor": 1.185
+    },
+    "77": {
+        "diff": 666955,
+        "req": 4272119,
+        "total": 33791393,
+        "growthFactor": 1.19
+    },
+    "78": {
+        "diff": 811702,
+        "req": 5083821,
+        "total": 38875214,
+        "growthFactor": 1.195
+    },
+    "79": {
+        "diff": 991345,
+        "req": 6075166,
+        "total": 44950380,
+        "growthFactor": 1.2
+    },
+    "80": {
+        "diff": 1215033,
+        "req": 7290199,
+        "total": 52240579,
+        "growthFactor": 1.205
+    },
+    "81": {
+        "diff": 1494490,
+        "req": 8784689,
+        "total": 61025268,
+        "growthFactor": 1.21
+    },
+    "82": {
+        "diff": 1844784,
+        "req": 10629473,
+        "total": 71654741,
+        "growthFactor": 1.215
+    },
+    "83": {
+        "diff": 2285336,
+        "req": 12914809,
+        "total": 84569550,
+        "growthFactor": 1.22
+    },
+    "84": {
+        "diff": 2841257,
+        "req": 15756066,
+        "total": 100325616,
+        "growthFactor": 1.225
+    },
+    "85": {
+        "diff": 3545114,
+        "req": 19301180,
+        "total": 119626796,
+        "growthFactor": 1.23
+    },
+    "86": {
+        "diff": 4439271,
+        "req": 23740451,
+        "total": 143367247,
+        "growthFactor": 1.235
+    },
+    "87": {
+        "diff": 5579005,
+        "req": 29319456,
+        "total": 172686703,
+        "growthFactor": 1.24
+    },
+    "88": {
+        "diff": 7036669,
+        "req": 36356125,
+        "total": 209042828,
+        "growthFactor": 1.245
+    },
+    "89": {
+        "diff": 8907250,
+        "req": 45263375,
+        "total": 254306203,
+        "growthFactor": 1.25
+    },
+    "90": {
+        "diff": 11315843,
+        "req": 56579218,
+        "total": 310885421,
+        "growthFactor": 1.255
+    },
+    "91": {
+        "diff": 14427700,
+        "req": 71006918,
+        "total": 381892339,
+        "growthFactor": 1.26
+    },
+    "92": {
+        "diff": 18461798,
+        "req": 89468716,
+        "total": 471361055,
+        "growthFactor": 1.265
+    },
+    "93": {
+        "diff": 23709209,
+        "req": 113177925,
+        "total": 584538980,
+        "growthFactor": 1.27
+    },
+    "94": {
+        "diff": 30558039,
+        "req": 143735964,
+        "total": 728274944,
+        "growthFactor": 1.275
+    },
+    "95": {
+        "diff": 39527390,
+        "req": 183263354,
+        "total": 911538298,
+        "growthFactor": 1.28
+    },
+    "96": {
+        "diff": 51313739,
+        "req": 234577093,
+        "total": 1146115391,
+        "growthFactor": 1.285
+    },
+    "97": {
+        "diff": 66854471,
+        "req": 301431564,
+        "total": 1447546955,
+        "growthFactor": 1.29
+    },
+    "98": {
+        "diff": 87415153,
+        "req": 388846717,
+        "total": 1836393672,
+        "growthFactor": 1.295
+    },
+    "99": {
+        "diff": 114709781,
+        "req": 503556498,
+        "total": 2339950170,
+        "growthFactor": 1.3
+    },
+    "100": {
+        "diff": 151066949,
+        "req": 654623447,
+        "total": 2994573617,
+        "growthFactor": 1.305
+    }
+}

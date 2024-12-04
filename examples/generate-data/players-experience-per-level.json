@@ -1,0 +1,13 @@
+{
+    "startExp": 10,
+    "baseGrowthFactor": 2,
+    "baseGrowthFactorPerLevel": {
+        "5": 1.5,
+        "10": 1.35,
+        "15": 1.271,
+        "20": 1.1,
+        "40": 1
+    },
+    "maxLevel": 100,
+    "growthIncrease": 0.005
+}
