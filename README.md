@@ -41,4 +41,5 @@ Create as many "Levels Set"(s) you need. For this example, we need two since we 
 - Use the game data generator (https://github.com/damian-pastorini/reldens-docs/blob/master/generators/players-experience-per-level.md) to create the players experience file or use the example one (https://github.com/damian-pastorini/reldens-docs/blob/master/examples/generate-data/players-experience-per-level.json).
 - Import the generated file using the import command:
 ```
+$ npx reldens-import players-experience-per-level custom-game-theme-test generate-data/players-experience-per-level.json
 ```
