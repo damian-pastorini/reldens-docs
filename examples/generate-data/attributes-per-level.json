@@ -1,0 +1,29 @@
+{
+    "templateBase": {
+        "hp": 20,
+        "mp": 20,
+        "atk": 10,
+        "def": 10
+    },
+    "typeTemplates": {
+        "Mage": {
+            "hp": 25,
+            "mp": 40,
+            "atk": 12,
+            "def": 12
+        },
+        "Warrior": {
+            "hp": 40,
+            "mp": 20,
+            "atk": 25,
+            "def": 22
+        }
+    },
+    "typesVariations": {
+        "player": {
+            "min": 1,
+            "max": 2
+        }
+    },
+    "typeScaleFactorRandom": 0.6
+}
