@@ -1,4 +1,10 @@
-## Example "Local" installation process:
+## Installation
+
+### - [Check the requirements here](https://github.com/damian-pastorini/reldens-docs/blob/master/requirements.md).
+
+
+
+## Example "local" installation process:
 
 ### Through NPM / command line:
 
