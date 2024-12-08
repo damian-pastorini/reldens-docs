@@ -50,7 +50,7 @@ First we will use the generators available on the commands to get as much data a
 - For the documentation we will create 2 classes: "Warrior" and "Mage", you can create as many as you like, but 1 is required for the platform to work (even when later you don't show it anywhere in the game).
 - As you can see in the example below we are also including different "labels" for the paths at different levels (50 and 100), this will represent our class paths changes (with code you could customize the behavior to make the players change classes through an NPC).
 - Additionally, in the same file we will include another parameter called "preAppendRace" = true, which will be used by the importer later.
-- Your final `class-paths.json` file should look [like this /examples/generated/class-paths.json](https://github.com/damian-pastorini/reldens-docs/blob/master/examples/generated/class-paths.json):
+- Your final `class-paths.json` file should look like this [/examples/generated/class-paths.json](https://github.com/damian-pastorini/reldens-docs/blob/master/examples/generated/class-paths.json):
 ```
 {
     "preAppendRace": true,
@@ -140,7 +140,7 @@ First we will use the generators available on the commands to get as much data a
     }
 }
 ```
-- Your final `stats.json` file should look [like this /examples/generated/stats.json](https://github.com/damian-pastorini/reldens-docs/blob/master/examples/generated/stats.json):
+- Your final `stats.json` file should look like this [/examples/generated/stats.json](https://github.com/damian-pastorini/reldens-docs/blob/master/examples/generated/stats.json):
 - Here you can see we are adding custom data on the HP and MP "stats" to make these show their base value in the client. This will make the properties display like HP 23/30 (current value / base value) instead of HP 23 (current value only).
 - When running the import of this file it will generate the required "stats" and then the variations. 
 
@@ -164,4 +164,5 @@ UPDATE `skills_class_path` SET `enabled` = 1;
 
 
 After running the two imports, you should be able to start your server, register a player and reach the class path selection screen:
+
 ![Reldens - Player creation screen without scene](https://github.com/damian-pastorini/reldens-docs/blob/master/screenshots/client-player-creation-none-scene.png)
