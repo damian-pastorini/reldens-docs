@@ -86,13 +86,17 @@ $ set RELDENS_LOG_LEVEL=9 && node .
 
 ### Help commands:
 
-Now you can use npx commands, for example, following the old commands for the next steps:
+Now you can use npx commands.
+
+Reminder: replace `[your-theme-name]` by your game theme name, in the examples is `my-game`.
+
+For example:
 ```
-$ npx reldens installSkeleton custom-game-theme-test
 $ npx reldens help
-$ npx reldens buildCss custom-game-theme-test
-$ npx reldens buildClient custom-game-theme-test
-$ npx reldens copyAssetsToDist custom-game-theme-test
+$ npx reldens installSkeleton [your-theme-name]
+$ npx reldens buildCss [your-theme-name]
+$ npx reldens buildClient [your-theme-name]
+$ npx reldens copyAssetsToDist [your-theme-name]
 ```
 
 ### You are done!
