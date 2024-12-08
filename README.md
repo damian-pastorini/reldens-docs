@@ -24,7 +24,9 @@ Use all the provided methods like generators, imports, commands, and admin panel
 
 ### - Step #3 - Customize your game
 
-Check the most common customizations to change the game flow (login, registration, screens) as you need. [Follow this guide to get your game up and running in no time](https://github.com/damian-pastorini/reldens-docs/blob/master/customize-your-game.md)
+Check the most common customizations to change the game flow (login, registration, screens) as you need.
+
+[Follow this guide to get your game up and running in no time](https://github.com/damian-pastorini/reldens-docs/blob/master/customize-your-game.md)
 
 ---
 
