@@ -23,6 +23,8 @@ Ways to create the game contents:
 
 ---
 
+### 1 - Generating data through commands
+
 First we will use the generators available on the commands to get as much data as possible to later process with the importers.
 
 - Use the [players experience generator](https://github.com/damian-pastorini/reldens-docs/blob/master/generators/players-experience-per-level.md) to create the players experience data file or use the [example file /examples/generated/players-experience-per-level-2024-12-04-13-57-21.json](https://github.com/damian-pastorini/reldens-docs/blob/master/examples/generated/players-experience-per-level-2024-12-04-13-57-21.json).
@@ -125,7 +127,11 @@ First we will use the generators available on the commands to get as much data a
 - Here you can see we are adding custom data on the HP and MP "stats" to make these show their base value in the client. This will make the properties display like HP 23/30 (current value / base value) instead of HP 23 (current value only).
 - When running the import of this file it will generate the required "stats" and then the variations.
 
-With these two files (`class-paths.json` and `stats.json`) ready we have enough data to run the imports.
+---
+
+### 2 - Importing data through commands
+
+With the generated files (`class-paths.json` and `stats.json`) we have enough data to run the imports.
 - Open a console on your game root folder.
 - Reminder, for every command replace `[your-theme-name]` by your game theme name, in the examples is `my-game`.
 - Run the two imports in the following order
@@ -147,3 +153,17 @@ UPDATE `skills_class_path` SET `enabled` = 1;
 After running the two imports, you should be able to start your server, register a player and reach the class path selection screen:
 
 ![Reldens - Player creation screen without scene](https://github.com/damian-pastorini/reldens-docs/blob/master/screenshots/client-player-creation-none-scene.png)
+
+---
+
+### 3 - Generating and importing data through the admin panel
+
+To get your game up and running at this point you need a [RoomScene](https://github.com/damian-pastorini/reldens-docs/blob/master/entities/rooms.md).
+
+The main requirement to create a RoomScene is the [map in JSON format](https://github.com/damian-pastorini/reldens-docs/blob/master/maps-manual-creation.md), which needs to follow all the name conventions and rules in order to work properly.
+
+At this point you could:
+- Use the [Tiled Map Editor](https://www.mapeditor.org/) app to [create the maps manually](https://github.com/damian-pastorini/reldens-docs/blob/master/maps-manual-creation.md).
+- Use ["Maps Wizard"](https://github.com/damian-pastorini/reldens-docs/blob/master/maps-wizard.md) in the admin panel which will generate and import the maps for you.
+
+For the documentation we will use the [Maps Wizard (https://github.com/damian-pastorini/reldens-docs/blob/master/maps-wizard.md)](https://github.com/damian-pastorini/reldens-docs/blob/master/maps-wizard.md), so follow the instructions in the link.

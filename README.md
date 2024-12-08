@@ -22,3 +22,10 @@ Install Reldens following the [installation guide](https://github.com/damian-pas
 
 Use all the provided methods like generators, imports, commands, and admin panel to [create the contents for your game](https://github.com/damian-pastorini/reldens-docs/blob/master/installation.md).
 
+### - Step #3 - Customize your game
+
+Check the most common customizations to change the game flow (login, registration, screens) as you need. [Follow this guide to get your game up and running in no time](https://github.com/damian-pastorini/reldens-docs/blob/master/customize-your-game.md)
+
+---
+
+Navigate the entire docs to learn everything about Reldens.
