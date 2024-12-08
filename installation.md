@@ -1,7 +1,6 @@
 ## Installation
 
-### - [Check the requirements here](https://github.com/damian-pastorini/reldens-docs/blob/master/requirements.md).
-
+### - [Check the software requirements here](https://github.com/damian-pastorini/reldens-docs/blob/master/requirements.md).
 
 
 ## Example "local" installation process:
