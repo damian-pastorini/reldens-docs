@@ -6,9 +6,17 @@ Project GitHub: https://github.com/damian-pastorini/reldens
 
 Website: https://www.reldens.com/
 
-Join us on Discord: https://discord.gg/HuJMxUY
-
 Follow the project progress in the GitHub board: https://github.com/users/damian-pastorini/projects/2/views/1
+
+---
+
+## Do not miss our demo! https://demo.reldens.com/
+
+Play as guest or register as user. The demo will show how everything works under a bare minimum server setup.
+
+---
+
+## Join us on Discord! https://discord.gg/HuJMxUY
 
 ---
 
