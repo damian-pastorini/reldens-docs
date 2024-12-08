@@ -20,7 +20,7 @@ Install Reldens following the [installation guide](https://github.com/damian-pas
 
 ### - Step #2 - Minimum required contents creation
 
-Use all the provided methods like generators, imports, commands, and admin panel to [create the contents for your game](https://github.com/damian-pastorini/reldens-docs/blob/master/installation.md).
+Use all the provided methods like generators, imports, commands, and admin panel to [create the contents for your game](https://github.com/damian-pastorini/reldens-docs/blob/master/minimum-required-contents-creation.md).
 
 ### - Step #3 - Customize your game
 
