@@ -88,7 +88,7 @@ $ set RELDENS_LOG_LEVEL=9 && node .
 
 Now you can use npx commands.
 
-Reminder: replace `[your-theme-name]` by your game theme name, in the examples is `my-game`.
+Reminder: replace `[your-theme-name]` by your game theme name, in this installation example the theme name is `my-game`.
 
 For example:
 ```
