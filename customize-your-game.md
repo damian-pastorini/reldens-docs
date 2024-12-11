@@ -30,4 +30,3 @@ Through the admin panel we can modify the following parameters (filter by `path`
 - `players/multiplePlayers/enabled`: this will allow users to create more than one player on their accounts.
 - `rooms/selection/allowOnLogin`: enabled / disable the room selection on login, since you can specify the serverUrl in the room custom data, this can be used for players server-selection.
 - `rooms/selection/allowOnRegistration`: enabled / disable the room selection on registration, since you can specify the serverUrl in the room custom data, this can be used as one time server-selection.
-
