@@ -1,8 +1,8 @@
-## Known issues:
+## Known issues
 
 ### Connection errors with MySQL:
 
-If Node JS can't connect to your MySQL server is highly likely you are using a new version of MySQL authentication (schema vs native).
+If NodeJS can't connect to your MySQL server is highly likely you are using a new version of MySQL authentication (schema vs native).
 In that case make sure to have `mysql2` been set as your RELDENS_DB_CLIENT environment variable in the `.env` and in the `knexfile.js` files.
 
 If you still see the issue, you can try by updating your DB user to use the old MySQL "native" password:

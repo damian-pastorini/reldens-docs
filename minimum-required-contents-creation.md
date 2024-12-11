@@ -23,14 +23,34 @@ Ways to create the game contents:
 
 ---
 
-### 1 - Generating data through commands
+### 1 - Prepare your assets
 
-First we will use the generators available on the commands to get as much data as possible to later process with the importers.
+For me this is the fun part!
+
+For the documentation we will create 2 classes: "Warrior" and "Mage".
+
+You can create as many as you like, but at least 1 is required for the platform to work (even when later you don't show it anywhere in the game).
+
+Each class path will require their own [player spritesheets](general/create-and-configure-a-player-spritesheet.md):
+- [mage.png](examples/generate-data/mage.png) 
+- [warrior.png](examples/generate-data/warrior.png)
+
+You need to place these files in the following folder: `[your-game-folder]/theme/[your-theme]/assets/custom/sprites/`
+
+That way these will be built once you re-build your client.
+
+Next are your map files, you can check how to create your own here: [maps manual creation](maps-manual-creation.md).
+
+But for the documentation we will use the existent ones in the examples. 
+
+
+### 2 - Generating data through commands
+
+Here we will use the generators available on the commands to get as much data as possible to later process with the importers.
 
 - Use the [players experience generator](generators/players-experience-per-level.md) to create the players experience data file or use the [example file /examples/generated/players-experience-per-level-2024-12-04-13-57-21.json](examples/generated/players-experience-per-level-2024-12-04-13-57-21.json).
 - Copy the generated file and rename it to `class-paths.json`.
 - In that file (`class-paths.json`), we will include our classes paths information.
-- For the documentation we will create 2 classes: "Warrior" and "Mage", you can create as many as you like, but 1 is required for the platform to work (even when later you don't show it anywhere in the game).
 - As you can see in the example below we are also including different "labels" for the paths at different levels (50 and 100), this will represent our class paths changes (with code you could customize the behavior to make the players change classes through an NPC).
 - Additionally, in the same file we will include another parameter called "preAppendRace" = true, which will be used by the importer later.
 - Your final `class-paths.json` file should look like this [/examples/generated/class-paths.json](examples/generated/class-paths.json):
@@ -129,7 +149,7 @@ First we will use the generators available on the commands to get as much data a
 
 ---
 
-### 2 - Importing data through commands
+### 3 - Importing data through commands
 
 With the generated files (`class-paths.json` and `stats.json`) we have enough data to run the imports.
 - Open a console on your game root folder.
@@ -143,7 +163,7 @@ $ npx reldens-import attributes-per-level [your-theme-name] generated/stats.json
 - At this point, by default the class paths generator should have created your classes by all `disabled`.
 - Start, your server, go to the `admin panel` > `Classes & Levels` >  `Class Paths` > edit each, set the enabled = true, and save.
 
-`[Know but v4.0.0-beta.38.3]` - Fix the records directly in the database with a query like the following:
+`[Know bug v4.0.0-beta.38.3]` - Fix the records directly in the database with a query like the following:
 
 ```
 UPDATE `skills_class_path` SET `enabled` = 1;
@@ -156,7 +176,7 @@ After running the two imports, you should be able to start your server, register
 
 ---
 
-### 3 - Generating and importing data through the admin panel
+### 4 - Generating and importing data through the admin panel
 
 To get your game up and running at this point you need a [RoomScene](entities/rooms.md).
 
@@ -167,3 +187,9 @@ At this point you could:
 - Use ["Maps Wizard"](maps-wizard.md) in the admin panel which will generate and import the maps for you.
 
 For the documentation we will use the [Maps Wizard (maps-wizard.md)](maps-wizard.md), so follow the instructions in the link.
+
+With the maps generated you are able to get into your game already!
+
+![Reldens - Player creation screen without scene](screenshots/client-player-creation-or-selection.png)
+
+![Reldens - Player creation screen without scene](screenshots/client-game-play-town.png)
