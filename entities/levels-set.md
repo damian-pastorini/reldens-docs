@@ -15,7 +15,7 @@ Here's an example on how these properties would work:
 
 The "Autofill ranges" will create virtual levels for 3 and 4.
 The "Autofill experience multiplier" will be used as multiplied for the previous level required experience, like:
-```
+```js
 Math.round(this.levels[n-1].requiredExperience * this.autoFillExperienceMultiplier);
 ```
 So if you have 1.5 as multiplier, then virtual level 3 experience will be 15 and for virtual level 4 will be 22.5.

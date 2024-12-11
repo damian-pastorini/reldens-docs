@@ -42,7 +42,7 @@ First click on the `Set Sample Data in "Generator Data"` button.
 
 That will complete the textarea below with the following information (don't use the code below since it's the parameters explanation):
 
-```
+```json
 {
     "factor": this is the value used to increase / decrease the map images size, for example if your map is 16x16 but you want to use 32x32 you can set a "2" here). 
     "mainPathSize": the main path size is the amount of tiles used to start the map in the borders.

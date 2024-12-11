@@ -15,7 +15,7 @@ To use the generator follow these steps:
 - Go to your game folder and create a folder called "generate-data".
 - Inside the created folder create a new file named "attributes-per-level.json".
 - Save the following content in the file:
-```
+```json
 {
     "templateBase": {
         "hp": 20,
@@ -54,7 +54,7 @@ This JSON contains the parameters that will be passed to the `attributes-per-lev
 $ npx reldens-generate attributes-per-level ./generate-data/attributes-per-level.json
 ```
 - As result, a new folder called "generated" will be created under your "game" folder, and there you will find a file with the generated data like:
-```
+```json
 {
     "statsByVariation": {
         "player": {

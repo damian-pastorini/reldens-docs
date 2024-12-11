@@ -89,7 +89,7 @@ Now you can use npx commands.
 
 Reminder: replace `[your-theme-name]` by your game theme name, in this installation example the theme name is `my-game`.
 
-For example:
+These are the basic commands you will need to re-install or rebuild your client:
 ```
 $ npx reldens help
 $ npx reldens installSkeleton [your-theme-name]
@@ -109,7 +109,7 @@ Administration Panel: http://localhost:8080/reldens-admin
 By default, only the `root` registered user is an administrator.
 
 The admin role ID can be changed by setting the default "admin/roleId" in the "config" table in the database.
-```
+```sql
 UPDATE `config` SET `value` = [new-admin-role-id] WHERE `scope` = 'server' AND `path` = 'admin/roleId';
 ```
 

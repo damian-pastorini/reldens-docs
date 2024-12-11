@@ -54,7 +54,7 @@ Here we will use the generators available on the commands to get as much data as
 - As you can see in the example below we are also including different "labels" for the paths at different levels (50 and 100), this will represent our class paths changes (with code you could customize the behavior to make the players change classes through an NPC).
 - Additionally, in the same file we will include another parameter called "preAppendRace" = true, which will be used by the importer later.
 - Your final `class-paths.json` file should look like this [/examples/generated/class-paths.json](examples/generated/class-paths.json):
-```
+```json
 {
     "preAppendRace": true,
     "classPaths": {
@@ -94,7 +94,7 @@ Here we will use the generators available on the commands to get as much data as
 - Now, use the [attributes per level generator](generators/attributes-per-level.md) to create the "stats" with their incremental values per level for each of your classes or use this [example file /examples/generated/attributes-per-level-2024-12-06-19-03-48.json](examples/generated/attributes-per-level-2024-12-06-19-03-48.json).
 - Copy the generated file and rename it to `stats.json`.
 - In that file (`stats.json`), we will include our "stats" basic data for the importer, like this:
-```
+```json
 {
     "stats": {
         "hp": {
@@ -165,7 +165,7 @@ $ npx reldens-import attributes-per-level [your-theme-name] generated/stats.json
 
 `[Know bug v4.0.0-beta.38.3]` - Fix the records directly in the database with a query like the following:
 
-```
+```sql
 UPDATE `skills_class_path` SET `enabled` = 1;
 ```
 

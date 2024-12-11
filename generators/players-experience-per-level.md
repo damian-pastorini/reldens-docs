@@ -18,7 +18,7 @@ To use the generator follow these steps:
 - Go to your game folder and create a folder called "generate-data".
 - Inside the created folder create a new file named "players-experience-per-level.json".
 - Save the following content in the file:
-```
+```json
 {
     "startExp": 10,
     "baseGrowthFactor": 2,
@@ -41,7 +41,7 @@ This JSON contains the parameters that will be passed to the `players-experience
 $ npx reldens-generate players-experience-per-level ./generate-data/players-experience-per-level.json
 ```
 - As result, a new folder called "generated" will be created under your "game" folder, and there you will find a file with the generated data like:
-```
+```json
 {
     "1": {
         "req": 10,
