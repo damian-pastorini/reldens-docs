@@ -188,6 +188,17 @@ At this point you could:
 
 For the documentation we will use the [Maps Wizard (maps-wizard.md)](maps-wizard.md), so follow the instructions in the link.
 
+The last step here will be to change the default config to set your player initial class and map:
+
+In the admin panel go to the configuration section and filter by the following paths:
+
+- `players/initialState/room_id`
+- `players/actions/initialClassPathId`
+
+By default, these values are set as "1", but since you created two class paths, and multiple town maps here you need to set the IDs if any of those.
+
+For example, if you like to have a mage as default class path, or if you like to start in town 4 instead of town 1.
+
 With the maps generated you are able to get into your game already! You can [move forward on the customizations section](customize-your-game.md).
 
 ![Reldens - Player creation screen without scene](screenshots/client-player-creation-or-selection.png)
