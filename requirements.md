@@ -1,16 +1,18 @@
-# System requirements
+## System requirements
 
-### - Node >= 18.0.0
-### - NPM >=8.0.0
+
+### Node >= 18.0.0
+### NPM >=8.0.0
 
 Get your release: https://nodejs.org/en/about/releases/
 
 
+### MySQL server 8.x
 
-### - MySQL server 8.x
 Download from: https://dev.mysql.com/downloads/mysql/
 
-## Recommended software:
+
+### Other recommended software:
 
 TiledMapEditor: https://www.mapeditor.org
 

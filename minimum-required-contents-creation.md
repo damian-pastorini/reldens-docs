@@ -188,7 +188,7 @@ At this point you could:
 
 For the documentation we will use the [Maps Wizard (maps-wizard.md)](maps-wizard.md), so follow the instructions in the link.
 
-With the maps generated you are able to get into your game already!
+With the maps generated you are able to get into your game already! You can [move forward on the customizations section](customize-your-game.md).
 
 ![Reldens - Player creation screen without scene](screenshots/client-player-creation-or-selection.png)
 

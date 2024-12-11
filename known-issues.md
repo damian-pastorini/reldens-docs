@@ -1,5 +1,6 @@
 ## Known issues
 
+
 ### Connection errors with MySQL:
 
 If NodeJS can't connect to your MySQL server is highly likely you are using a new version of MySQL authentication (schema vs native).

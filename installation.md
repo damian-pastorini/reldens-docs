@@ -1,6 +1,6 @@
 ## Installation
 
-### - [Check the software requirements here](requirements.md).
+[Check the software requirements here.](requirements.md)
 
 
 ## Example "local" installation process:
@@ -68,7 +68,7 @@ $ node .
 
 8 - Browse the default URL http://localhost:8080/ and the game should run normally.
 
-IMPORATANT: if you remove the `install.lock` file from the root folder, and re-run the process (`node .`), you will get the installation guide that will help you to install Reldens.
+IMPORTANT: if you remove the `install.lock` file from the root folder, and re-run the process (`node .`), you will get the installation guide that will help you to install Reldens.
 
 
 ### Changing environment variables:

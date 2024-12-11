@@ -1,4 +1,4 @@
-### System Configuration
+## System Configuration
 
 This is the "general settings" area where you can manage a lot of the platform options.
 
