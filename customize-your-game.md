@@ -89,7 +89,7 @@ Next: remove the extra languages if you don't need them, from the sample data yo
 - `[your-game-folder]/theme/[your-theme-name]/es-index.html`
 
 Next we need to tackle a known bug: 
-`[Know bug v4.0.0-beta.38.3]` - Remove unused default theme assets.
+- `[Know bug v4.0.0-beta.38.3]` - Remove unused default theme assets.
 
 These are the files that can be safely removed (some are used as default and must be replaced by your own):
 - `[your-game-folder]/theme/[your-theme-name]/assets/audio/footstep.mp3`
@@ -100,6 +100,35 @@ These are the files that can be safely removed (some are used as default and mus
 - `[your-game-folder]/theme/[your-theme-name]/assets/custom/groups/*`
 - `[your-game-folder]/theme/[your-theme-name]/assets/custom/items/*`
 - `[your-game-folder]/theme/[your-theme-name]/assets/custom/rewards/*`
-- `[your-game-folder]/theme/[your-theme-name]/assets/custom/sprites/axe.png`
 - `[your-game-folder]/theme/[your-theme-name]/assets/custom/sprites/*` except `player-base.png`, `warrior.png` and `mage.png` (these two are because the created class paths following the sample).
-- 
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/maps/reldens*` since every map generated does not have `reldens` as name all of these are actually from the sample data and can be removed as well.
+
+Update your game favicons which are located in:
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/favicons`
+
+Update your game logo and game background (if needed), the files are located in:
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/web/`
+And after change the files then you can change the logo file name in the index template:
+- `[your-game-folder]/theme/[your-theme-name]/index.html`
+Search for "your-logo", and replace the image name in that block:
+```html
+<img id="your-logo" src="./assets/web/reldens-your-logo-mage.png" alt="reldens"/>
+```
+The background has to be replaced in the styles file:
+- `[your-game-folder]/theme/[your-theme-name]/css/base.scss`
+Search for `.wrapper`, and change the style:
+```scss
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    overflow: auto;
+    z-index: 10000;
+    background-size: cover;
+    background-color: $cWhite;
+    background-image: url(../assets/web/reldens-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+```
