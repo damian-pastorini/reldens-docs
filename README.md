@@ -4,17 +4,17 @@ Open source platform to create multiplayer games.
 
 Version: 4.0.0
 
-Project GitHub: https://github.com/damian-pastorini/reldens
+Project GitHub: [https://github.com/damian-pastorini/reldens](https://github.com/damian-pastorini/reldens)
 
-NPM package: https://www.npmjs.com/package/reldens
+NPM package: [https://www.npmjs.com/package/reldens](https://www.npmjs.com/package/reldens)
 
-Website: https://www.reldens.com/
+Website: [https://www.reldens.com/](https://www.reldens.com/)
 
-Follow the project progress in the GitHub board: https://github.com/users/damian-pastorini/projects/2/views/1
+Follow the project progress in the GitHub board: [https://github.com/users/damian-pastorini/projects/2/views/1](https://github.com/users/damian-pastorini/projects/2/views/1)
 
 ---
 
-## Do not miss our demo! https://demo.reldens.com/
+## Do not miss our demo! [https://demo.reldens.com/](https://demo.reldens.com/)
 
 Play as guest or register as user. The demo will show how everything works under a bare minimum server setup.
 
@@ -22,14 +22,14 @@ We use this demo to show how many features are available on the platform.
 
 In order to access the server admin you need to register with an email and password.
 
-Administration panel: https://demo.reldens.com/reldens-admin/
+Administration panel: [https://demo.reldens.com/reldens-admin/](https://demo.reldens.com/reldens-admin/)
 
 IMPORTANT NOTE: every action in this admin demo is blocked on purpose, in order to really test all it's features you need to do it on your own implementation.
 
 
 ---
 
-## Join us on Discord! https://discord.gg/HuJMxUY
+## Join us on Discord! [https://discord.gg/HuJMxUY](https://discord.gg/HuJMxUY)
 
 ---
 
@@ -48,6 +48,12 @@ Use all the provided methods like generators, imports, commands, and admin panel
 Check the most common customizations to change the game flow (login, registration, screens) as you need.
 
 [Follow this guide to get your game up and running in no time](customize-your-game.md)
+
+### - Step #4 - Publish it!
+
+Though we don't offer a cloud service to upload your game, you can check this example guide on [how to create your own server in AWS](demo-server-setup-aws.md).
+
+Since the platform use [Colyseus](https://colyseus.io/) we also recommend to try their [cloud services](https://colyseus.io/pricing/).
 
 ---
 
