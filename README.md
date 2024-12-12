@@ -6,6 +6,8 @@ Version: 4.0.0
 
 Project GitHub: [https://github.com/damian-pastorini/reldens](https://github.com/damian-pastorini/reldens)
 
+Change log: [https://github.com/damian-pastorini/reldens/releases](https://github.com/damian-pastorini/reldens/releases)
+
 NPM package: [https://www.npmjs.com/package/reldens](https://www.npmjs.com/package/reldens)
 
 Website: [https://www.reldens.com/](https://www.reldens.com/)

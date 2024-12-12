@@ -34,4 +34,72 @@ Through the admin panel we can modify the following parameters (filter by `path`
 NOTE: though every change can be done in the admin, a good recommendation here is to actually save all these updates as queries, that way you will be always able to track your game config changes and reset your entire server or deploy new database instances easier.  
 
 
-###  
+### - Enabling guest users on recently generated rooms
+
+By default, the generated rooms will not have the "allowGuests" option in their custom data.
+
+If you enabled the guest login, you will need to update the rooms with the parameter, for that you can:
+- Update the rooms manually through the admin (if you need to do it in some rooms will be easier).
+- Update the rooms with a query if you need to do it for too many rooms:
+```sql
+UPDATE `rooms`
+SET 
+    `customData` = CASE
+        WHEN JSON_VALID(`customData`) THEN JSON_SET(`customData`, '$.allowGuest', TRUE)
+        ELSE '{"allowGuest":true}'
+    END
+-- here you can filter by the rooms you need:
+-- WHERE `id` = IN ([your ids]) OR `name` LIKE '%some part of the room name%'
+;
+```
+
+### - Customize your theme
+
+Start by removing the disclaimer message from: `[your-game-folder]/theme/[your-theme-name]/index.html`.
+Search "row-disclaimer" and delete the entire block.
+Now edit the index.js file from the same folder: `[your-game-folder]/theme/[your-theme-name]/index.js`.
+Remove this entire block:
+```js
+// demo message removal:
+reldens.events.on('reldens.startGameAfter', () => {
+    reldens.gameDom.getElement('.row-disclaimer')?.remove();
+});
+```
+
+You can also remove the version block:
+```js
+// client event listener example with version display:
+reldens.events.on('reldens.afterInitEngineAndStartGame', () => {
+    reldens.gameDom.getElement('#current-version').innerHTML = reldens.config.client.gameEngine.version+' -';
+});
+```
+
+Then at the top of the file you will see the log level been set, you can change it as you like, for example to avoid the change by query parameter. 
+```js
+const urlParams = new URLSearchParams(window.location.search);
+window.RELDENS_LOG_LEVEL = (urlParams.get('logLevel') || 7);
+window.RELDENS_ENABLE_TRACE_FOR = Number(urlParams.get('traceFor') || 'emergency,alert,critical');
+```
+
+I normally leave this block over the development process and remove it before publish the game since it's handy to quickly debug stuff.
+
+In that same file you can see how the skills cold down works, if you don't want to use that you can remove it as well.
+
+Next: remove the extra languages if you don't need them, from the sample data you can remove:
+- `[your-game-folder]/theme/[your-theme-name]/es-index.html`
+
+Next we need to tackle a known bug: 
+`[Know bug v4.0.0-beta.38.3]` - Remove unused default theme assets.
+
+These are the files that can be safely removed (some are used as default and must be replaced by your own):
+- `[your-game-folder]/theme/[your-theme-name]/assets/audio/footstep.mp3`
+- `[your-game-folder]/theme/[your-theme-name]/assets/audio/reldens-town.mp3`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/actions/controls/*`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/actions/sprites/fireball*`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/actions/sprites/heal*`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/groups/*`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/items/*`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/rewards/*`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/sprites/axe.png`
+- `[your-game-folder]/theme/[your-theme-name]/assets/custom/sprites/*` except `player-base.png`, `warrior.png` and `mage.png` (these two are because the created class paths following the sample).
+- 

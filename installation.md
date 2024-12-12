@@ -3,9 +3,9 @@
 [Check the software requirements here.](requirements.md)
 
 
-## Example "local" installation process:
+This is an example "local" installation process, which can be done in two ways:
 
-### Through NPM / command line:
+### - Through NPM / command line:
 
 1 - Create a folder and run npm install reldens, like:
 ```
@@ -26,14 +26,16 @@ $ node .
 
 4 - Browse the default URL http://localhost:8080/ to get the installation UI:
 
-https://s3.us-east-1.amazonaws.com/dwd-files/assets/features/reldens-install.png
+![Installation UI](screenshots/installation-ui.png)
 
 Here, you can easily configure the server services requirements.
+
+5 - Note: make sure to set `mysql` or `mysql2` depending on your MySQL server version (`mysql` will require the old native authentication, it's recommended to use `mysql2`).
 
 Once you click on the "install" button, the installer will validate the parameters and import the database SQL scripts to create the tables and insert the required data (like the config or the sample data).
 
 
-### Fork / clone the skeleton repository (not recommended but available):
+### - By GIT fork / clone the skeleton repository (not recommended but available):
 
 https://github.com/damian-pastorini/reldens-skeleton/
 
