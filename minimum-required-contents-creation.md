@@ -201,6 +201,6 @@ For example, if you like to have a mage as default class path, or if you like to
 
 With the maps generated you are able to get into your game already! You can [move forward on the customizations section](customize-your-game.md).
 
-![Reldens - Player creation screen without scene](screenshots/client-player-creation-or-selection.png)
+![Reldens - Player creation screen with scene](screenshots/client-player-creation-or-selection.png)
 
-![Reldens - Player creation screen without scene](screenshots/client-game-play-town.png)
+![Reldens - Game up and running!](screenshots/client-game-play-town.png)
