@@ -30,7 +30,7 @@ $ node .
 
 Here, you can easily configure the server services requirements.
 
-5 - Note: make sure to set `mysql` or `mysql2` depending on your MySQL server version (`mysql` will require the old native authentication, it's recommended to use `mysql2`).
+**IMPORTANT: check the database considerations at the bottom of this page.**
 
 Once you click on the "install" button, the installer will validate the parameters and import the database SQL scripts to create the tables and insert the required data (like the config or the sample data).
 
@@ -61,7 +61,9 @@ $ npm install
 
 5 - Create or update the `.env` and `knexfile.js` with your server credentials.
 
-6 - Make sure to set `mysql` or `mysql2` as your RELDENS_DB_CLIENT environment variable depending on your MySQL server version. 
+**IMPORTANT: check the database considerations at the bottom of this page.**
+
+At this point you could change your database client by setting `mysql` or `mysql2` as your RELDENS_DB_CLIENT environment variable depending on your MySQL server version. 
 
 7 - Run Node:
 ```
@@ -125,3 +127,11 @@ You can deploy the game in a server and have the client deployed on any CDN.
 - Upload those contents to any CDN.
 
 ENJOY!
+
+---
+
+### IMPORTANT Database considerations
+
+- Make sure to use `mysql` or `mysql2` depending on your MySQL server version (`mysql` will require the old native authentication, it's recommended to use `mysql2`).
+- If you had installed Reldens in the past, and you are planning to use the same database, neither the installer nor the migration scripts will remove any existent tables, and those won't be updated as probably required, so make sure to use an empty database.
+

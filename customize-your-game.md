@@ -108,8 +108,9 @@ Update your game favicons which are located in:
 
 Update your game logo and game background (if needed), the files are located in:
 - `[your-game-folder]/theme/[your-theme-name]/assets/custom/web/`
-And after change the files then you can change the logo file name in the index template:
+And after change the files then you can change the logo file name in the index and the game layout templates:
 - `[your-game-folder]/theme/[your-theme-name]/index.html`
+- `[your-game-folder]/theme/[your-theme-name]/assets/html/layout.html`
 Search for "your-logo", and replace the image name in that block:
 ```html
 <img id="your-logo" src="./assets/web/reldens-your-logo-mage.png" alt="reldens"/>
