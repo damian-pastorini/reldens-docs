@@ -56,14 +56,30 @@ SET
 ### - Customize your theme
 
 Start by removing the disclaimer message from: `[your-game-folder]/theme/[your-theme-name]/index.html`.
+
 Search "row-disclaimer" and delete the entire block.
+
 Now edit the index.js file from the same folder: `[your-game-folder]/theme/[your-theme-name]/index.js`.
+
 Remove this entire block:
 ```js
 // demo message removal:
 reldens.events.on('reldens.startGameAfter', () => {
     reldens.gameDom.getElement('.row-disclaimer')?.remove();
 });
+```
+
+For last remove the styles from the base.scss file: `[your-game-folder]/theme/[your-theme-name]/css/base.scss`.
+
+Remove this entire block:
+```scss
+.disclaimer {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px 2%;
+    background-color: rgba(255,255,255,0.1);
+}
 ```
 
 You can also remove the version block:
