@@ -1,5 +1,25 @@
 ## Customize your game
 
+The first recommendation I'm going to write here is not related to the platform but to your game creation plan:
+is highly important that you have ready as many assets as you can.
+
+Customize your game means you will modify the platform to implement your game flow, the layout, all the main elements like maps, objects, players, animations, etc. For all of these you will require all the graphics to be ready to be implemented.
+
+One way to make sure you have everything, could be to go through all the elements that are used in the default theme, since there you will find how many assets you need.
+For example, here you can find a basic list):
+- Your game fonts (are you going to use some web font, or a custom one embed on your game?).
+- Your game logo.
+- A homepage design, let's say with a background.
+- Does your game layout contain custom elements like fancy images for borders or boxes backgrounds? Get those images ready as well.
+- The styles sheets related if you bought some kind of game "theme".
+- You will need icons: not only for the game layout (like for controls or settings buttons), but also for stuff like weapons and items that will be displayed in the inventory.
+- Get ready your sprites for every player class path, for every object / NPC / enemy.
+- You need your players and enemies skills animations.
+- Probably this was implicit on the previous steps of the game creation, but you should have all your maps tilesheet ready.
+
+As you can see all of this is TON of contents and better you be ready.
+
+
 ### - How to apply your customizations
 
 Since Reldens gives you both sides of a game, server and client, some customizations will require a server reboot and some will require a client rebuild and the server reboot.
