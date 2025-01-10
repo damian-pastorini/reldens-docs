@@ -3,7 +3,7 @@
 The first recommendation I'm going to write here is not related to the platform but to your game creation plan:
 is highly important that you have ready as many assets as you can.
 
-Customize your game means you will modify the platform to implement your game flow, the layout, all the main elements like maps, objects, players, animations, etc. For all of these you will require all the graphics to be ready to be implemented.
+Customize your game means you will modify the platform to implement your game flow, the layout, all the main elements like maps, objects, players, animations, etc. For all this you will need all the related graphics ready to be implemented.
 
 One way to make sure you have everything, could be to go through all the elements that are used in the default theme, since there you will find how many assets you need.
 For example, here you can find a basic list:

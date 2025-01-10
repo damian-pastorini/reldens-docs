@@ -134,4 +134,4 @@ ENJOY!
 
 - Make sure to use `mysql` or `mysql2` depending on your MySQL server version (`mysql` will require the old native authentication, it's recommended to use `mysql2`).
 - If you had installed Reldens in the past, and you are planning to use the same database, neither the installer nor the migration scripts will remove any existent tables, and those won't be updated as probably required, so make sure to use an empty database.
-
+- Make sure to change the default admin path from `reldens-admin` to something else to avoid people to know the path to your administration section.

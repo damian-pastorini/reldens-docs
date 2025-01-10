@@ -2,76 +2,47 @@
 
 In the admin panel you will find the Maps Wizard, which will help you to generate and import your maps at once.
 
-Go to the administration panel > Wizards > Maps Generation and Import
+The wizard is built over the `@reldens/tile-map-generator` package ([check the documentation here](packages/tile-map-generator/index.md)), which can be used as standalone by creating your own scripts to generate maps.
 
-### 1 - Generate the map(s)
+Go to the administration panel > Wizards > Maps Generation and Import
 
 The wizard has 4 main options to create maps from different types of files.
 
-IMPORTANT: maps layers name conventions MUST BE FOLLOWED IN EVERY CASE.
+**IMPORTANT NOTES:**
+- Maps layers name conventions MUST BE FOLLOWED IN EVERY CASE ([check the maps manual creation section](maps-manual-creation.md)).
+- I strongly recommend to learn how to use the Tiled Map Editor app (https://www.mapeditor.org), knowing how to edit tilesets, export maps and create terrains (https://doc.mapeditor.org/en/stable/manual/terrain/) for the maps edition are the most useful features. 
 
 Note: for glossary purpose I will use "TME" when referring to the "Tiled Map Editor" app. 
 
 Here you can find a brief description of each option and links to their full documentation:
 
-1. ["Generate a SINGLE random map with Layer Elements Object Loader (LayerElementsObjectLoader)"](generators/maps-single-layer-elements-object-loader.md):
+1. ["Generate a SINGLE random map with Layer Elements Object Loader (LayerElementsObjectLoader)"](generators/maps-single-elements-object-loader.md):
    - For this option you will need to create a single map JSON file with "TME" for each element on your scene.
    - Then, on your "Generator data" (between the other requirements), you will need to specify how many of each element the generator has to create.
    - With that the generator will create a map with those elements placed randomly.
 
 ![Map creation single element](screenshots/map-creation-single-element.png)
 
-2. ["Generate a SINGLE random map with Layer Elements Composite Loader (LayerElementsCompositeLoader)"](generators/maps-single-layer-elements-composite-loader.md):
+2. ["Generate a SINGLE random map with Layer Elements Composite Loader (LayerElementsCompositeLoader)"](generators/maps-single-elements-composite-loader.md):
     - In this case you will need to create a single map JSON file containing all the elements to be used for the creation.
     - The important part here is the quantity must be specified as custom property in each "base" layer for each element.
 
 ![Map creation single element](screenshots/map-creation-multiple-elements.png)
 
-3. ["Generate MULTIPLE random maps by Multiple Loader (MultipleByLoaderGenerator)"](generators/maps-multiple-multiple-by-loader-generator.md):
+3. ["Generate MULTIPLE random maps by Multiple Loader (MultipleByLoaderGenerator)"](generators/maps-multiple-by-loader-generator.md):
     - The only difference between this option and the previous is that we can pass a set of "mapNames" on the "Generator data", and the generator will create multiple random maps for each name.
 
-4. ["Generate MULTIPLE random maps with Layer Elements Composite Loader (MultipleWithAssociationsByLoaderGenerator)"](generators/maps-multiple-multiple-with-associations-by-loader-generator.md):
+4. ["Generate MULTIPLE random maps with Layer Elements Composite Loader (MultipleWithAssociationsByLoaderGenerator)"](generators/maps-multiple-with-associations-by-loader-generator.md):
     - For the last option, we will need to pass same data as previous option, but include the sub-maps that will be associated to the main ones.
     - For example, if we pass 2 town maps as main ones (through mapsNames), with one associated house map with quantity 5, the generator will create 2 towns (linked by the path layer), with 5 houses each, where each door will be linked to the house inner map. Yes! This will give you a complete town.
 
-To show the simple way to create tons of maps at once we will choose option #4.
+To show the simple way to create tons of maps at once we will choose option #4 (here I'm only describing the steps, for deeper understanding how it works check each option section).
 
-Follow the guide liked in the item above to create your own map files, for the documentation we will use the provided files by reldens examples.
+For these quick steps we will use the sample files provided by Reldens.
 
-First click on the `Set Sample Data in "Generator Data"` button.
+First click on the `Set Sample Data in "Generator Data"` button, which will complete the textarea below with the required parameters to generate the maps:
 
-That will complete the textarea below with the following information (don't use the code below since it's the parameters explanation):
-
-```json
-{
-    "factor": this is the value used to increase / decrease the map images size, for example if your map is 16x16 but you want to use 32x32 you can set a "2" here). 
-    "mainPathSize": the main path size is the amount of tiles used to start the map in the borders.
-    "blockMapBorder": this would make the map border tiles walkeable or not.
-    "freeSpaceTilesQuantity": the amount of tiles between the map elements.
-    "variableTilesPercentage": the percentaje of the total map that will be used to place random ground tiles fron the specified variations.
-    "collisionLayersForPaths": an array of layers that will not allow the generator to create the path over.
-    "mapsInformation": [ // an array of maps to be generated
-        {
-            "mapName": "town-001", // the map name is going to be used as key
-            "mapTitle": "Town 1" // the label will be used for the later import 
-        },
-        // create as many as you need
-    ],
-    "associationsProperties": { // these are the properties applied to the sub-maps
-        "generateElementsPath": this will avoid the path creation inside the sub-maps
-        "blockMapBorder": true,
-        "freeSpaceTilesQuantity": 0,
-        "variableTilesPercentage": 0,
-        "placeElementsOrder": default is "random", but "inOrder" will make the generator place one element after the other in the map.
-        "orderElementsBySize": false,
-        "randomizeQuantities": this will randomize the entire elements array, for example 2 houses, 2 trees, could get 1 tree, 2 houses, 1 tree, or house, tree, house, tree, etc.  
-        "applySurroundingPathTiles": true by default this will make the genearator look for the path corners tiles and apply those to the main path, this way you can get paths with rounder corners.
-        "automaticallyExtrudeMaps": true by default, this will prevent tile bleeding issues.
-    },
-    "compositeElementsFile": this is a reference to the uploaded JSON file used for the sub-maps data. 
-    "automaticallyExtrudeMaps": this is to prevent tile bleeding issues on the main maps
-}
-```
+![Map creation set sample data](screenshots/maps-creation-set-sample-data.png)
 
 Now, you can download the following files to attach on your generator (these links are also visible in the admin when you choose the option):
 
