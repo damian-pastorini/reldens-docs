@@ -31,6 +31,8 @@ Any layer with this keyword in the name will get an incremental depth in the cli
 
 For example: if you have 5 layers, and the 3rd and 5th in the list have "over-player" in the name, the layers will get the following depth in Phaser: L1 = depth 0, L2 = depth 0, L3 = depth 1, L4 = depth 0, L5 = depth 2 > where the player sprite will have depth 0 and go over all the other layers, the L3 and 5 will be over the player.
 
+The layer deep will be calculated like: layer index * map.height * map.tileHeight.
+
 #### "change-points"
 Any layer with this in the name should only have tiles are going to be used as change-points in the server side.
 
@@ -38,3 +40,5 @@ At this time if you used multiple images to create your maps, you will need to m
 
 #### "respawn-area"
 The layers that starts with this keyword will be used for the respawn objects areas and though this layers requires to have content on them to know the valid tiles for respawn, these will never generate collisions.
+
+#### "below-player"

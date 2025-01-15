@@ -75,9 +75,9 @@ $ node .
 IMPORTANT: if you remove the `install.lock` file from the root folder, and re-run the process (`node .`), you will get the installation guide that will help you to install Reldens.
 
 
-### Changing environment variables:
+### Changing environment variables on runtime:
 
-For example for the log level:
+For example, change the log level:
 
 ```
 // linux, gitbash:
