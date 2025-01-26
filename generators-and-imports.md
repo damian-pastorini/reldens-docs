@@ -10,7 +10,7 @@ Generators:
 
 Importers:
 
-- Objects
+- [Objects](importers/objects-importer.md)
 - Players experience per level
 - Attributes per level
 - Class paths

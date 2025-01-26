@@ -39,6 +39,43 @@ Any layer with this in the name should only have tiles are going to be used as c
 At this time if you used multiple images to create your maps, you will need to merge them in one, for that you can check optimize steps below.
 
 #### "respawn-area"
-The layers that starts with this keyword will be used for the respawn objects areas and though this layers requires to have content on them to know the valid tiles for respawn, these will never generate collisions.
+The layers contain this keyword in the name, the layer will be used for the related respawn object areas and every tile different from `0` in this layer will be used for respawn objects. 
+
+Note: when creating these respawn areas you don't need to worry about the "non-walkable" tiles since Reldens will filter those when the respawn area is created, meaning you could set a fully occupied layer as your tile map base and still get objects only respawning in the "free" tiles. 
 
 #### "below-player"
+
+### Add multiple tilesets to the same map
+
+If your map has more than one tileset you need to include multiple scene images and each tileset name in the `JSON` must have the same name as the image without the file extension.
+
+First you need to edit you `room` and upload multiple images for the "Scene Images", for example:
+
+![Multiple scene images](./screenshots/maps-creation-multiple-images.png)
+
+Then edit your map `JSON` file, search for the "tilesets", and fix their names after their image file names like:
+
+```
+"image":"reldens-forest.png",
+"name":"reldens-forest",
+```
+
+```
+// ... 
+"tilesets": [
+    {
+        "columns":14,
+        "firstgid":1,
+        "image":"reldens-forest.png",
+        "imageheight":408,
+        "imagewidth":476,
+        "margin":1,
+        "name":"reldens-forest",
+        "spacing":2,
+        "tilecount":168,
+        "tileheight":32
+    }
+// ...
+```
+
+- `[Know bug v4.0.0-beta.38.3]` - Multiple images here is breaking because all the tilesets are been included with the same key and the tileset key must be unique.
