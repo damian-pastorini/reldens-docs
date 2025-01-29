@@ -22,7 +22,7 @@ As you can see all of this is TON of contents and better you be ready.
 
 ### - How to apply your customizations
 
-Since Reldens gives you both sides of a game, server and client, some customizations will require a server reboot and some will require a client rebuild and the server reboot.
+Since Reldens gives you both sides of a game, server and client, some customizations will require a server reboot and some will additionally require a client rebuild before the reboot.
 
 - To reboot the game server (for now), you will need to kill the node process and start it again.
 
@@ -31,11 +31,11 @@ Since Reldens gives you both sides of a game, server and client, some customizat
 ```
 $ npx reldens help
 
+$ npx reldens copyAssetsToDist [your-game-theme-folder]
+
 $ npx reldens buildCss [your-game-theme-folder]
 
 $ npx reldens buildClient [your-game-theme-folder]
-
-$ npx reldens copyAssetsToDist [your-game-theme-folder]
 ```
 
 With these commands in mind we can now start customizing the game.

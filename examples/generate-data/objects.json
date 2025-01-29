@@ -1,0 +1,90 @@
+{
+    "objects": [
+        {
+            "clientKey": "rat",
+            "title": "Bad Rat",
+            "layer": "ground-respawn-area-level-1",
+            "level": "1",
+            "experienceKey": "monsterA",
+            "attributesKey": "monsterA",
+            "attributesSubTypeKey": "melee",
+            "privateParams": {
+                "interactionRadio": 60
+            },
+            "clientParams": {
+                "autoStart": true,
+                "frameStart": 0,
+                "frameEnd": 2,
+                "repeat": -1
+            },
+            "assets": [
+                {
+                    "assetKey": "rat",
+                    "assetFile": "level-001-rat-108x136-36x34.png",
+                    "extraParams": {
+                        "frameWidth": 36,
+                        "frameHeight": 34
+                    }
+                }
+            ]
+        },
+        {
+            "clientKey": "spider",
+            "title": "Spider",
+            "layer": "ground-respawn-area-level-2",
+            "level": "2",
+            "experienceKey": "monsterA",
+            "attributesKey": "monsterA",
+            "attributesSubTypeKey": "melee",
+            "privateParams": {
+                "interactionRadio": 70
+            },
+            "assets": [
+                {
+                    "assetKey": "spider",
+                    "assetFile": "level-002-spider-126x120-42x30.png",
+                    "extraParams": {
+                        "frameWidth": 43,
+                        "frameHeight": 30
+                    }
+                }
+            ]
+        }
+    ],
+    "defaults": {
+        "classType": "multiple",
+        "enabled": 1,
+        "privateParams": {
+            "shouldRespawn": true,
+            "childObjectType": "enemy",
+            "isAggressive": true
+        },
+        "animations": {
+            "up": {
+                "start": 9,
+                "end": 11
+            },
+            "down": {
+                "start": 0,
+                "end": 2
+            },
+            "left": {
+                "start": 3,
+                "end": 5
+            },
+            "right": {
+                "start": 6,
+                "end": 8
+            }
+        },
+        "respawn": {
+            "respawnTime": 2000,
+            "instancesLimit": 4
+        },
+        "roomsNames": [
+            "objects-import"
+        ]
+    },
+    "attributesPerLevelFile": "monsters-attributes-per-level-generated.json",
+    "experiencePerLevelFile": "monsters-experience-per-level-generated.json"
+}

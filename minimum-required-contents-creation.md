@@ -8,9 +8,9 @@ The minimum required contents are related between each other, so you need to cre
 - [Stats](entities/stats.md)
 - [Levels Modifiers](entities/level-modifiers.md)
 - [Rooms](entities/rooms.md)
-- [Skills](entities/skill.md)
 - [Objects](entities/objects.md)
 - [Respawn Areas](entities/respawn-areas.md)
+- [Skills](entities/skill.md)
 
 Note: though is recommended to learn the info in the links above, you don't need to read all of them now to follow the content creation steps.
 
@@ -169,7 +169,6 @@ $ npx reldens-import attributes-per-level [your-theme-name] generated/stats.json
 UPDATE `skills_class_path` SET `enabled` = 1;
 ```
 
-
 After running the two imports, you should be able to start your server, register a player and reach the class path selection screen:
 
 ![Reldens - Player creation screen without scene](screenshots/client-player-creation-none-scene.png)
@@ -199,8 +198,30 @@ By default, these values are set as "1", but since you created two class paths, 
 
 For example, if you like to have a mage as default class path, or if you like to start in town 4 instead of town 1.
 
-With the maps generated you are able to get into your game already! You can [move forward on the customizations section](customize-your-game.md).
+With the maps generated you are able to get into your game already!
 
 ![Reldens - Player creation screen with scene](screenshots/client-player-creation-or-selection.png)
 
 ![Reldens - Game up and running!](screenshots/client-game-play-town.png)
+
+---
+
+### 5 - Create and import objects with respawn areas
+
+For the objects creation and import we will use the "Objects Import" tool available in the administration panel under the "Wizards" item in the main menu.
+
+![Reldens - Objects Import](screenshots/admin-objecs-import-section.png)
+
+If you click on the `Set Sample Data in "Generator Data"` button, you will get a JSON with the data to create two simple enemies, but here you can see a more complete example: [objects.json](examples/generate-data/objects.json).
+
+Follow the ["Objects Importer" guide in this link](importers/objects-importer.md) to create a JSON for the objects you need.
+
+Once you have it, you can upload it or copy/paste it and click on the "Generate" button.
+
+---
+
+### 6 - Create and import skills
+
+WIP.
+
+With all the basic contents created you can [move forward on the customizations section](customize-your-game.md).

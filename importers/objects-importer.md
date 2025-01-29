@@ -3,66 +3,51 @@
 The way the objects importer works is with a JSON file that should contain the complete objects data but with some extra
 benefits, like:
 
-- Having a "defaults" data set.
-- Getting the related respawn areas automatically created.
+- Having a "defaults" data set to avoid having to specify the same properties over and over if you have to create multiple objects.
+- Getting almost all the related contents automatically created: animations, stats, experience rewarded and respawn areas.
 
-**IMPORTANT**: the importer will create all the objects related records, but you will have to manually upload the assets files to the proper folder `[your-theme-folder]/assets/custom/sprites/`. 
+**IMPORTANT NOTES**: 
+- The importer will create all the objects related records, but you will have to manually upload the assets files to the proper folder `[your-theme-folder]/assets/custom/sprites/`.
+- If you would like to get the "attributes per level" or the "experience rewards" automatically created you would need to pass that information to the importer, in which case, I recommend to use the [attributes per level generator](../generators/attributes-per-level.md) and the [enemies experience per level generator](../generators/enemies-experience-per-level.md).
 
 ```
 {
     "objects": [
         {
-            "clientKey": "bat",
-            "title": "Bad Bat",
-            "layer": "ground-respawn-area-level-1",
-            "level": "1",
-            "experienceKey": "monsterA",
-            "attributesKey": "monsterA",
-            "attributesSubTypeKey": "melee",
+            "clientKey": "enemy_forest_1",
+            "title": "Tree",
             "privateParams": {
-                "shouldRespawn": true,
-                "childObjectType": "enemy",
-                "isAggressive": true,
-                "interactionRadio": 120
+                "interactionRadio": 60
             },
             "clientParams": {
-                "autoStart": true,
-                "frameStart": 0,
-                "frameEnd": 2,
-                "repeat": -1
+                "autoStart": true
             },
             "assets": [
                 {
-                    "assetKey": "bat",
-                    "assetFile": "bat-270x384-90x96.png",
+                    "assetType": "spritesheet",
+                    "assetKey": "enemy_forest_1",
+                    "assetFile": "monster-treant.png",
                     "extraParams": {
-                        "frameWidth": 90,
-                        "frameHeight": 96
+                        "frameWidth": 36,
+                        "frameHeight": 34
                     }
                 }
             ]
         },
         {
-            "clientKey": "bear_brown",
-            "title": "Hungry Bear",
-            "layer": "ground-respawn-area-level-2",
-            "level": "1",
-            "experienceKey": "monsterB",
-            "attributesKey": "monsterB",
-            "attributesSubTypeKey": "melee",
+            "clientKey": "enemy_forest_2",
+            "title": "Tree Punch",
             "privateParams": {
-                "shouldRespawn": true,
-                "childObjectType": "enemy",
-                "isAggressive": true,
-                "interactionRadio": 70
+                "interactionRadio": 90
             },
             "assets": [
                 {
-                    "assetKey": "bear_brown",
-                    "assetFile": "bear-brown-165x152-55x38.png",
+                    "assetType": "spritesheet",
+                    "assetKey": "enemy_forest_2",
+                    "assetFile": "monster-golem2.png",
                     "extraParams": {
-                        "frameWidth": 55,
-                        "frameHeight": 38
+                        "frameWidth": 52,
+                        "frameHeight": 32
                     }
                 }
             ]
@@ -71,6 +56,11 @@ benefits, like:
     "defaults": {
         "classType": "multiple",
         "enabled": 1,
+        "privateParams": {
+            "shouldRespawn": true,
+            "childObjectType": "enemy",
+            "isAggressive": true
+        },
         "animations": {
             "up": {
                 "start": 9,
@@ -94,9 +84,7 @@ benefits, like:
             "instancesLimit": 4
         },
         "roomsNames": [
-            "boots-001",
-            "boots-002",
-            "boots-003"
+            "objects-import"
         ]
     },
     "attributesPerLevelFile": "monsters-attributes-per-level-generated.json",
@@ -125,7 +113,7 @@ defaults: {
 }
 ```
 
-In order to complete the objects crete we need to know the room ID for that object. 
+In order to complete the objects creation we need to know the room ID for that object. 
 Since manually writing the room IDs would be difficult and unclear to which room the object is going to be assigned, here we can use the `roomsNames`.
 The importer will fetch the rooms IDs and create one `object` per each specified room here.
 In the case above the 2 objects are going to be created in 3 rooms.
@@ -146,4 +134,90 @@ ground-respawn-area-level-1_60_up
 ground-respawn-area-level-1_60_down
 ground-respawn-area-level-1_60_left
 ground-respawn-area-level-1_60_right
+```
+
+### Objects "stats"
+
+If your object is an "enemy" type, or for some reason it needs to have "stats", you can pass the "stats" information in two different ways:
+
+- By passing the "stats" property on each object (or as part of the "defaults"), like the two samples below:
+```
+"objects": [
+    {
+        "clientKey": "enemy_forest_1",
+        "title": "Tree",
+        "privateParams": {
+            "interactionRadio": 60
+        },
+        // ...
+        "stats": {
+            "hp": 100,
+            "mp": 50,
+            "atk":10,
+            "def":10,
+            // ...
+        }
+        // ...
+    }
+],
+"defaults": {
+    // ...
+    "stats": {
+        "hp": 100,
+        "mp": 50,
+        "atk":10,
+        "def":10,
+        // ...
+    }
+    // ...
+}
+```
+In this case the format is `{[stat-key]: [stat-value]}`, where [stat-key] must match the `key` on the storage.
+
+![Objects "stats" in the storage](../screenshots/storage-objects-stats.png)
+
+- By passing the path of the "[monster-attributes-per-level-generated.json](../examples/generated/monsters-attributes-per-level-generated.json)" file in the JSON, like:
+```
+"objects": [
+    // ...
+],
+"defaults": {
+    // ...
+},
+"attributesPerLevelFile": "/[path-to-file]/monsters-attributes-per-level-generated.json"
+```
+
+### Objects "experience" reward
+
+The object experience reward can also be passed in two ways:
+- As "experience" on each object (or as part of the "defaults"), like the two samples below:
+```
+"objects": [
+    {
+        "clientKey": "enemy_forest_1",
+        "title": "Tree",
+        "privateParams": {
+            "interactionRadio": 60
+        },
+        // ...
+        "experience": 10,
+        // ...
+    }
+],
+"defaults": {
+    // ...
+    "experience": 10,
+    // ...
+}
+```
+
+- By passing the path of the "[monsters-experience-per-level-generated.json](../examples/generated/monsters-experience-per-level-generated.json)" file in the JSON, like:
+```
+"objects": [
+    // ...
+],
+"defaults": {
+    // ...
+},
+"experiencePerLevelFile": "/[path-to-file]/monsters-experience-per-level-generated.json"
 ```

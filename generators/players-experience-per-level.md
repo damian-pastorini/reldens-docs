@@ -35,7 +35,7 @@ To use the generator follow these steps:
 ```
 This JSON contains the parameters that will be passed to the `players-experience-per-level` command.
 
-- Open a console for the command line in your game folder. As next, we need to generate the ["levels"](update-link-here) for those sets.
+- Open a console for the command line in your game folder. As next, we need to generate the ["levels"](../entities/level.md) for those sets.
 - Run the following command:
 ```
 $ npx reldens-generate players-experience-per-level ./generate-data/players-experience-per-level.json
