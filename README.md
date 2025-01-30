@@ -41,9 +41,9 @@ IMPORTANT NOTE: every action in this admin demo is blocked on purpose, in order 
 
 Install Reldens following the [installation guide](installation.md).
 
-### - Step #2 - Minimum required contents creation
+### - Step #2 - Contents creation
 
-Use all the provided methods like generators, imports, commands, and admin panel to [create the contents for your game](minimum-required-contents-creation.md).
+Use all the provided methods like generators, imports, commands, and admin panel to [create the contents for your game](contents-creation.md).
 
 ### - Step #3 - Customize your game
 

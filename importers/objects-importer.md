@@ -1,7 +1,18 @@
 ## Objects Importer
 
-The way the objects importer works is with a JSON file that should contain the complete objects data but with some extra
-benefits, like:
+The objects importer can be used from the administration panel:
+![Reldens - Administration Panel - Objects importer](../screenshots/admin-objecs-import-section.png)
+
+Or from the command line using Reldens NPX commands:
+```
+$ npx reldens-import objects [your-game-theme] [your-objects-data-file-path]
+```
+For example:
+```
+$ npx reldens-import objects custom-game-theme-test generate-data/objects.json
+```
+
+The way the importer works is with a JSON file that should contain the complete objects data but with some extra benefits, like:
 
 - Having a "defaults" data set to avoid having to specify the same properties over and over if you have to create multiple objects.
 - Getting almost all the related contents automatically created: animations, stats, experience rewarded and respawn areas.
