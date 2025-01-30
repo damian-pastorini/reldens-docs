@@ -1,6 +1,6 @@
-## Minimum required contents creation
+## Contents creation
 
-The minimum required contents are related between each other, so you need to create them in the following order:
+The contents are related between each other, so you need to create them in the following order:
 
 - [Level Sets](entities/levels-set.md)
 - [Class Paths](entities/class-path.md)
