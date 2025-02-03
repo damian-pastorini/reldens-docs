@@ -1,12 +1,12 @@
 ### Levels Set
 
-A "level set" in Reldens is a container group of ["levels"](entities/level.md).
+A "level set" in Reldens is a container group of ["levels"](level.md).
 
 As part of a "level set" you will find two properties that can be specified to help with the "levels" creation: 
 - "Autofill ranges": to automatically generate virtual gaps between the assigned levels.
 - "Autofill experience multiplier": which is the value used to increase the experience required between the levels.
 
-But the recommendation is to keep these disabled and use the ["levels" generator](generators/players-experience-per-level.md).
+But the recommendation is to keep these disabled and use the ["levels" generator](../generators/players-experience-per-level.md).
 
 Here's an example on how these properties would work:
 - Created Level 1, required experience 1.

@@ -132,6 +132,10 @@ In the case above the 2 objects are going to be created in 3 rooms.
 As you can see in the example above, we also need to know the `layer` (`layer_name` in the storage).
 The specified layer is also used to create the respawn area for the object.
 
+Also related to the respawn areas creation you can see the `classType` and the `childObjectType` visible in the "defaults". In these two you can pass the object type `key`, instead of having to pass the type ID which is the stored value.
+
+For reference, the available types with their description can be found in the [objects entity documentation](../entities/objects.md).
+
 ### Objects animations:
 For now, Objects has 2 places where we need to define the animations:
 - The "default" animation, which is defined in the `object.clientParams` and passed as part of the object properties.

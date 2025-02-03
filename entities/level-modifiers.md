@@ -15,7 +15,7 @@ Though we will always have a "single" set of "stats", the entities (like players
 An easy example of this is the common "HP" or "MP" that will be normally increase/decrease with damage or magic, and where you still need to keep the original maximum value like:
 - HP 20 / 100
 - MP 83 / 100
-- [property] [stat-current-value] / [stat-base-value]
+- `[property] [stat-current-value] / [stat-base-value]`
 
 These two keys ("stats" and "statsBase") are "hardcoded" in the entities and all over the game logic.
 
@@ -23,7 +23,7 @@ In order to create a modifier we need to specify:
 - "level owner": relation by level ID.
 - "key": a string to identify the modifier.
 - "property key": the path to the property including the initial "set", like "stats/hp" or "statsBase/hp".
-- "operation": normally will be "increment", but you can set any of the available [operations](general/operations.md)
+- "operation": normally will be "increment", but you can set any of the available [operations](../general/operations.md)
 - "value": the value that will be applied according the selected "operation".
  
 Note, operations can be used to reduce a "stat" if let's say you want your player change their "path" goal. For example: learning magic will increase the "MP" but at the same time could reduce a player "strength".
