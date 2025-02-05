@@ -42,10 +42,15 @@ By doing that, the files will be included in your `dist` next time you build the
 
 Here we will use the generators available on the commands to get as much data as possible to later process with the importers.
 
-- Use the [players experience generator](generators/players-experience-per-level.md) to create the players experience data file or use the [example file /examples/generated/players-experience-per-level-2024-12-04-13-57-21.json](examples/generated/players-experience-per-level-2024-12-04-13-57-21.json).
-- Copy the generated file and rename it to `class-paths.json`.
+- Check the documentation for the [players experience generator](generators/players-experience-per-level.md) to create your players experience configuration file: `./generate-data/players-experience-per-level.json`.
+- Then run the command to get the result:
+```
+$ npx reldens-generate players-experience-per-level ./generate-data/players-experience-per-level.json
+```
+- Or use the [example file /examples/generated/players-experience-per-level-2024-12-04-13-57-21.json](examples/generated/players-experience-per-level-2024-12-04-13-57-21.json).
+- Then copy the generated file and rename it to `class-paths.json`.
 - In that file (`class-paths.json`), we will include our classes paths information.
-- As you can see in the example below we are also including different "labels" for the paths at different levels (50 and 100), this will represent our class paths changes (with code you could customize the behavior to make the players change classes through an NPC).
+- In the JSON example below we are including different "labels" for the paths at different levels (50 and 100), this will represent our class paths changes (with code you could customize the behavior to make the players change classes through an NPC).
 - Additionally, in the same file we will include another parameter called "preAppendRace" = true, which will be used by the importer later.
 - Your final `class-paths.json` file should look like this [/examples/generated/class-paths.json](examples/generated/class-paths.json):
 ```json
@@ -225,6 +230,19 @@ If you click on the `Set Sample Data in "Generator Data"` button, you will get a
 Follow the ["Skills Importer" guide in this link](importers/skills-importer.md) to create a JSON for the skills you need.
 
 Once you have it, you can upload it or copy/paste it and click on the "Generate" button.
+
+---
+
+### Summary:
+
+- Prepare your configuration files for every generator and then go crazy:
+```
+npx reldens-generate players-experience-per-level ./generate-data/001-players-experience-per-level-2025-02-05-15-55-45.json
+
+npx reldens-generate attributes-per-level ./generate-data/003-attributes-per-level-2025-02-05-15-46-07-players.json
+
+npx reldens-generate attributes-per-level ./generate-data/004-attributes-per-level-2025-02-05-15-50-30-enemies.json
+```
 
 ---
 
