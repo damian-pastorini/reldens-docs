@@ -184,7 +184,7 @@ At this point you could:
 - Use the [Tiled Map Editor](https://www.mapeditor.org/) app to [create the maps manually](maps-manual-creation.md).
 - Use ["Maps Wizard"](maps-wizard.md) in the admin panel which will generate and import the maps for you.
 
-For the documentation we will use the [Maps Wizard (maps-wizard.md)](maps-wizard.md), so follow the instructions in the link.
+For these contents creation documentation we will use the [Maps Wizard (maps-wizard.md)](maps-wizard.md), so follow the instructions in the link.
 
 The last step here will be to change the default config to set your player initial class and map:
 
@@ -242,11 +242,14 @@ npx reldens-generate players-experience-per-level ./generate-data/001-players-ex
 npx reldens-generate attributes-per-level ./generate-data/003-attributes-per-level-2025-02-05-15-46-07-players.json
 
 npx reldens-generate attributes-per-level ./generate-data/004-attributes-per-level-2025-02-05-15-50-30-enemies.json
-
+```
+- Update the files and complete the required data manually to get your "class paths" and "stats" ready for import:
+```
 npx reldens-import class-paths [your-theme-name] generated/class-paths.json
 
 npx reldens-import attributes-per-level [your-theme-name] generated/stats.json
 ```
+- Prepare your maps config files and go crazy again on the generator in the admin panel.
 
 ---
 

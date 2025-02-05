@@ -69,8 +69,10 @@ The next screen will show you the generated main maps:
 
 ![Map creation single element](screenshots/maps-creation-main-generated-maps.png)
 
-Known missing feature: here we will display the sub-maps as well
+Known missing feature: here we will display the sub-maps as well.
 
 Mark the ones you consider "ok" to import, and click on the `"Import generated maps"` button.
 
 You will get back to the maps wizard page with a success message on it.
+
+If you had sub-maps created (like in the example above), the sub-maps will be automatically created and associated to the main map, but, all the main maps are not associated by default so you will need to edit and create change and return points between those. 
