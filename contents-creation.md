@@ -242,6 +242,10 @@ npx reldens-generate players-experience-per-level ./generate-data/001-players-ex
 npx reldens-generate attributes-per-level ./generate-data/003-attributes-per-level-2025-02-05-15-46-07-players.json
 
 npx reldens-generate attributes-per-level ./generate-data/004-attributes-per-level-2025-02-05-15-50-30-enemies.json
+
+npx reldens-import class-paths [your-theme-name] generated/class-paths.json
+
+npx reldens-import attributes-per-level [your-theme-name] generated/stats.json
 ```
 
 ---
