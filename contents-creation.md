@@ -1,5 +1,7 @@
 ## Contents creation
 
+Note: though is recommended to learn the info in the links below, you don't need to read all of them now to follow the content creation steps.
+
 The contents are related between each other, so you need to create them in the following order:
 
 - [Level Sets](entities/levels-set.md)
@@ -12,8 +14,6 @@ The contents are related between each other, so you need to create them in the f
 - [Respawn Areas](entities/respawn-areas.md)
 - [Skills](entities/skill.md)
 
-Note: though is recommended to learn the info in the links above, you don't need to read all of them now to follow the content creation steps.
-
 Ways to create the game contents:
 
 - Through the [generators and imports](generators-and-imports.md) available as commands.
@@ -25,8 +25,6 @@ Ways to create the game contents:
 
 ### 1 - Prepare your assets
 
-For me this is the fun part!
-
 For the documentation we will create 2 classes: "Warrior" and "Mage".
 
 You can create as many as you like, but at least 1 is required for the platform to work (even when later you don't show it anywhere in the game).
@@ -37,14 +35,10 @@ Each class path will require their own [player spritesheets](general/create-and-
 
 You need to place these files in the following folder: `[your-game-folder]/theme/[your-theme]/assets/custom/sprites/`
 
-That way these will be built once you re-build your client.
-
-Next are your map files, you can check how to create your own here: [maps manual creation](maps-manual-creation.md).
-
-But for the documentation we will use the existent ones in the examples. 
+By doing that, the files will be included in your `dist` next time you build the game client through the `buildClient` command.
 
 
-### 2 - Generating data through commands
+### 2 - Generating class paths and players data through commands
 
 Here we will use the generators available on the commands to get as much data as possible to later process with the importers.
 
@@ -149,7 +143,7 @@ Here we will use the generators available on the commands to get as much data as
 
 ---
 
-### 3 - Importing data through commands
+### 3 - Importing class paths data through commands
 
 With the generated files (`class-paths.json` and `stats.json`) we have enough data to run the imports.
 - Open a console on your game root folder.
@@ -175,7 +169,7 @@ After running the two imports, you should be able to start your server, register
 
 ---
 
-### 4 - Generating and importing data through the admin panel
+### 4 - Generating and importing maps through the admin panel
 
 To get your game up and running at this point you need a [RoomScene](entities/rooms.md).
 
@@ -222,6 +216,16 @@ Once you have it, you can upload it or copy/paste it and click on the "Generate"
 
 ### 6 - Create and import skills
 
-WIP.
+For the skills creation and import we will use the "Skills Import" tool available in the administration panel under the "Wizards" item in the main menu.
+
+![Reldens - Skills Import](screenshots/admin-skills-import-section.png)
+
+If you click on the `Set Sample Data in "Generator Data"` button, you will get a JSON with the data to create two simple enemies, but here you can see a more complete example: [skills.json](examples/generate-data/skills.json).
+
+Follow the ["Skills Importer" guide in this link](importers/skills-importer.md) to create a JSON for the skills you need.
+
+Once you have it, you can upload it or copy/paste it and click on the "Generate" button.
+
+---
 
 With all the basic contents created you can [move forward on the customizations section](customize-your-game.md).

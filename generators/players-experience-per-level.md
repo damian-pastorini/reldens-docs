@@ -2,7 +2,7 @@
 
 This generator will create a file with all the "levels" required data so you can import them in Reldens.
 
-The generator code can be found here: https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/players-experience-per-level.js
+[The generator code can be found here: https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/players-experience-per-level.js](https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/players-experience-per-level.js)
 
 Require parameters:
 - "startExp": is the experience required to reach the first level.

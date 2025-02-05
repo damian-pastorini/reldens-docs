@@ -2,7 +2,7 @@
 
 This generator will create a file with the "experience rewards" by enemies per "variation" and "level".
 
-The generator code can be found here: https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/monsters-experience-per-level.js
+[The generator code can be found here: https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/monsters-experience-per-level.js](https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/monsters-experience-per-level.js)
 
 There you can see how all the attributes below are used for the calculations.
 

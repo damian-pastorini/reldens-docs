@@ -2,7 +2,7 @@
 
 This generator will create a file that will list all the "levels", for each level it will generate a variation (these should be your class paths), and for each variation it will give you every "stat" value increment.
 
-The generator code can be found here: https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/attributes-per-level.js
+[The generator code can be found here: https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/attributes-per-level.js](https://github.com/damian-pastorini/game-data-generator/blob/master/lib/generator/attributes-per-level.js)
 
 Require parameters:
 - "templateBase": this will be the starting point for each "stat" value.
