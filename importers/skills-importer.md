@@ -248,7 +248,7 @@ For last, we reached the "skills" data. Since we already specify most of the inf
 
 They special available configurations you can find here are:
 - "classPathLevelRelations": used to map the skill with a class path specific level by setting the class path "key" (like "mage": "1" or "warrior": "2" so the "mage" class path will get this skill at level 1 and the warrior at level 2), and if you use "all" then it will be applied to every class path at the same level.
-- "objectsRelations": used to map the skill with many objects by setting the object "key" and the object "target" type, which would be normally the "player", like `"objectsRelations": {"enemy_1": "player", "enemy_2": "player"}`.
+- "objectsRelations": used to map the skill with many objects by setting the object "key" and the object ["target"](../entities/target-options.md) type, which would be normally the "player", like `"objectsRelations": {"enemy_1": "player", "enemy_2": "player"}`.
 - "typeData": this will contain two sub-properties, the key to reference the skill type itself, and the specific skill type configurations.
 - "clearPrevious": this property is mostly like helper for when you are updating or overriding a skill, is used to delete all the existent skill related entities ("targetEffects", "ownerEffects", "ownerConditions").
 - then "targetEffects", "ownerEffects", "ownerConditions": different from the defaults, in this case these would an array of options since you can have multiple of each per skill (for example, a skill may require 20 MP and 5 stamina to be executed, or could reduce the target HP in 10 and the MP in 5).
