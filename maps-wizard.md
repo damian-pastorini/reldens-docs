@@ -75,4 +75,4 @@ Mark the ones you consider "ok" to import, and click on the `"Import generated m
 
 You will get back to the maps wizard page with a success message on it.
 
-If you had sub-maps created (like in the example above), the sub-maps will be automatically created and associated to the main map, but, all the main maps are not associated by default so you will need to edit and create change and return points between those. 
+If you had sub-maps created (like in the example above), the sub-maps will be automatically created and associated to the main map, but, all the main maps are not associated by default so you will need to [edit and create change and return points between those](../).

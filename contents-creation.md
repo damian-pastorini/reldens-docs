@@ -186,7 +186,7 @@ At this point you could:
 
 For these contents creation documentation we will use the [Maps Wizard (maps-wizard.md)](maps-wizard.md), so follow the instructions in the link.
 
-The last step here will be to change the default config to set your player initial class and map:
+The next step will be to change the default config to set your player initial class and map.
 
 In the admin panel go to the configuration section and filter by the following paths:
 
@@ -202,6 +202,10 @@ With the maps generated you are able to get into your game already!
 ![Reldens - Player creation screen with scene](screenshots/client-player-creation-or-selection.png)
 
 ![Reldens - Game up and running!](screenshots/client-game-play-town.png)
+
+First thing you will note is: sub-generated maps will be automatically linked (like houses in town which were automatically generated with the town map), but there isn't any link between the town and the forest maps or between each forest.
+
+To fix that, we need to create change points and return points on each map manually.
 
 ---
 
