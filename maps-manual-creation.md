@@ -116,25 +116,31 @@ Click on "Save" and you are done, when the player hit that point it will be auto
 
 ---
 
-### Manually create new return positions
+### Manually create new return point
 
-What is a return point? Basically, the initial scene position that depends on the previous scene.
+What is a return point?
 
-For example: you are in the town > go to the first house > this one only has 1 return point saved (since your are always coming from a single door in the town) > but when you move out from the house 1, you will need to specified at which point of the town the player is going to be displayed, so there you will see two return positions for the town in the database: one is the default that will be always the house 1, and the other will be for the house two.
+Basically, these are the room position where the player will be located when entering into the room.
 
-To create these return positions you need to specify:
+If a room has a single entry point then you will have a single and "default" return point, but when a room has more than one entry point, then you will need to specify to which room the return point depends on.
 
-- The position in pixels
+Let's say we have a town with 2 houses:
+- "Default example": you are in the town > go to the house #1 > this one only has one return point (the default one), since you are always coming from a single door in the town.
+- "Depend on previous room example": when you move out from the house 1, you will need to specified at which point of the town the player is going to be located, so there you will need two return positions for the town, the default that will be always the house #1, and the dependent one will be for the house #2.
 
-- If it's the "default" position of that scene or not
+To create a return point you need to specify:
+- The "Room ID" is where the player will be entering after the room change (the destination room of the change point). If you go from the town into the house #1 this Room ID will be the room_id of the house #1.
+- The "direction", is how the player will be displayed (looking up, down, left or right).
+- The "x" and "y" values are the coordinates in units, where the player will be displayed in the map (here will be the position in the house 1). To calculate the coordinates you need to multiply the tile column and the row by the tile size.
+- If it's the "default" position for that scene or not.
+- The "From room ID" is from where the player is coming, in this cae the town room ID.
 
-- And the scene where that position will be trigger
+Go to the admin, to the Rooms / Return Points section:
 
-A record in this table will look like this:
+![Reldens - Administration panel, return points list section](screenshots/admin-rooms-return-points-list.png)
 
-INSERT INTO `rooms_return_points` (`id`, `room_id`, `direction`, `x`, `y`, `is_default`, `from_room_id`) VALUES (9, 6, 'right', 400, 400, 0, 2);
+Click on "Create New" button and complete the form with the required information:
 
-The "room_id" is where the player will be after the room change. If you go from the town into the house 1 this room_id will be the room_id of the house 1.
-The "direction", is how the player will be displayed (looking up, down, left or right).
-The "x" and "y" values are the position in pixels where the player will be displayed in the map (here will be the position in the house 1)
-For last, the "from_room_id" is where the player is coming from (the town room ID).
+![Reldens - Administration panel, create return point](screenshots/admin-rooms-create-return-point.png)
+
+Click on "Save" to create the new return point.
