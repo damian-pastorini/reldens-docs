@@ -253,7 +253,8 @@ npx reldens-import class-paths [your-theme-name] generated/class-paths.json
 
 npx reldens-import attributes-per-level [your-theme-name] generated/stats.json
 ```
-- Prepare your maps config files and go crazy again on the generator in the admin panel.
+- Prepare your objects and skills data files and import those through the administration panel.
+- Prepare your maps config files and go crazy again on the Maps Wizard in the administration panel.
 
 ---
 
