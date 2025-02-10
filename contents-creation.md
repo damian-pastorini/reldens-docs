@@ -205,7 +205,7 @@ With the maps generated you are able to get into your game already!
 
 First thing you will note is: sub-generated maps will be automatically linked (like houses in town which were automatically generated with the town map), but there isn't any link between the town and the forest maps or between each forest.
 
-To fix that, we need to create change points and return points on each map manually.
+To fix that, we need to create change points and return points on each map manually, follow the instructions on [this link to create new "change points" and "return points"](maps-manual-creation.md#manually-create-new-change-points).
 
 ---
 
