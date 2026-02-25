@@ -1,3 +1,7 @@
+# DEPRECATED, VISIT [https://www.reldens.com/documentation/](https://www.reldens.com/documentation)
+
+-----
+
 # Documentation
 
 Open source platform to create multiplayer games.
